@@ -1,12 +1,11 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
     commands:
-      - echo "Before running tests"
-      - sudo ls /root
-      - sudo yum install python3 -y
-  build:
+      - sudo yum install python3 git -y
+      - git clone https://github.com/zdolbuniv/taiga-back.git
+  pre_build:
     commands:
       - cd taiga-back
       - python3 -m venv .venv --prompt taiga-back
@@ -18,7 +17,7 @@ phases:
       - DJANGO_SETTINGS_MODULE=settings.config python manage.py loaddata initial_project_templates
       - DJANGO_SETTINGS_MODULE=settings.config python manage.py compilemessages
       - DJANGO_SETTINGS_MODULE=settings.config python manage.py collectstatic --noinput
-  post_build:
+  build:
     commands:
       - source .venv/bin/activate
       - DJANGO_SETTINGS_MODULE=settings.config python manage.py runserver
