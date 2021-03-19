@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - ehco Install
+  pre_build:
+    commands:
+      - ehco Install depend
+  build:
+    commands:
+      - ehco Buid
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: taiga
