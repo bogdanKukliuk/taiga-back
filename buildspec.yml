@@ -8,20 +8,13 @@ phases:
     commands:
       - ls
       - python3 -m venv .venv --prompt taiga-back
+  build:
+    commands:
       - source .venv/bin/activate
       - pip install --upgrade pip wheel
       - pip install -r requirements.txt
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
       - cp settings/config.py.prod.example settings/config.py
-      - sed 's/'PASSWORD': 'changeme',/'PASSWORD': 'password',/g' settings/config.py
-      - sed 's/'HOST': '',/'HOST': 'taiga.capl1ppkkhe3.us-east-1.rds.amazonaws.com',/g' settings/config.py
-  build:
-    commands:
-      - source .venv/bin/activate
-      - python manage.py migrate --noinput
-      - python manage.py loaddata initial_project_templates
-      - python manage.py compilemessages
-      - python manage.py collectstatic --noinput
 
 artifacts:
   files:
