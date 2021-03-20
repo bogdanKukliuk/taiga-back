@@ -21,7 +21,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APPEND_SLASH = False
-ALLOWED_HOSTS = ["taigaback.us-east-1.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["*"]
 
 ADMINS = (
     ("Admin", "example@example.com"),
