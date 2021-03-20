@@ -6,7 +6,7 @@ phases:
       - yum install python3 -y
   pre_build:
     commands:
-      - cd taiga-back
+      - ls
       - python3 -m venv .venv --prompt taiga-back
       - source .venv/bin/activate
       - pip install --upgrade pip wheel
