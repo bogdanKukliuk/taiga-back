@@ -3,16 +3,20 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Install
+      - sudo yum install python3 git -y
   pre_build:
     commands:
-      - echo Install depend
+      - cd taiga-back
+      - python3 -m venv .venv --prompt taiga-back
+      - source .venv/bin/activate
+      - pip install --upgrade pip wheel
+      - pip install -r requirements.txt
+      - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
   build:
     commands:
-      - echo Buid
+      - source .venv/bin/activate
+      - DJANGO_SETTINGS_MODULE=settings.config python manage.py runserver
 
 artifacts:
   files:
     - '**/*'
-  discard-paths: no
-  base-directory: taiga
