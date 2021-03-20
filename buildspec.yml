@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo yum install python3 git -y
+      - yum install python3 -y
   pre_build:
     commands:
       - cd taiga-back
