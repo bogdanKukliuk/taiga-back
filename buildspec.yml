@@ -12,11 +12,10 @@ phases:
       - pip install --upgrade pip wheel
       - pip install -r requirements.txt
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
-
   build:
     commands:
       - source .venv/bin/activate
-      - python manage.py test
+      - python manage.py runserver
 
 artifacts:
   files:
