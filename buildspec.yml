@@ -3,13 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - ehco Install
+      - echo Install
   pre_build:
     commands:
-      - ehco Install depend
+      - echo Install depend
   build:
     commands:
-      - ehco Buid
+      - echo Buid
 
 artifacts:
   files:
