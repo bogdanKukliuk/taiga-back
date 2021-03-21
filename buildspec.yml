@@ -16,14 +16,14 @@ phases:
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
       - mkdir .ebextensions
       - touch .ebextensions/django.config
-      - cat > .ebextensions/django.config << EOF
-      - "option_settings:
+      - cat <<-EOF > .ebextensions/django.config 
+      - option_settings:
       -  aws:elasticbeanstalk:environment:proxy:
       -    ProxyServer: nginx
       -  aws:elasticbeanstalk:container:python:
       -    WSGIPath: taiga.wsgi:application
       -    NumProcesses: 3
-      -    NumThreads: 20" EOF
+      -    NumThreads: 20 EOF
 artifacts:
   files:
     - '**/*'
