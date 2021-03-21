@@ -33,7 +33,7 @@ DATABASES = {
         'NAME': 'taiga',
         'USER': 'taiga',
         'PASSWORD': 'password',
-        'HOST': 'Taigaback.us-east-1.elasticbeanstalk.com',
+        'HOST': 'taigadb.capl1ppkkhe3.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
