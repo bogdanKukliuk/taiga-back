@@ -16,6 +16,7 @@ phases:
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
       - git clone https://github.com/zdolbuniv/.ebextensions.git
       - ls settings
+      - DJANGO_SETTINGS_MODULE=settings.config python manage.py migrate --noinput
 artifacts:
   files:
     - '**/*'
