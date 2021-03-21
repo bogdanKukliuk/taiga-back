@@ -17,13 +17,13 @@ phases:
       - mkdir .ebextensions
       - touch .ebextensions/django.config
       - cat > .ebextensions/django.config << EOF
-      option_settings:
-        aws:elasticbeanstalk:environment:proxy:
-          ProxyServer: nginx
-        aws:elasticbeanstalk:container:python:
-          WSGIPath: taiga.wsgi:application
-          NumProcesses: 3
-          NumThreads: 20
+      - option_settings:
+      -  aws:elasticbeanstalk:environment:proxy:
+      -    ProxyServer: nginx
+      -  aws:elasticbeanstalk:container:python:
+      -    WSGIPath: taiga.wsgi:application
+      -    NumProcesses: 3
+      -    NumThreads: 20
       - EOF
 artifacts:
   files:
