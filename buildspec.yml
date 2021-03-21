@@ -15,7 +15,7 @@ phases:
       - pip install -r requirements.txt
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
       - mkdir .ebextensions
-      - touch django.config
+      - touch .ebextensions/django.config
       - cat > .ebextensions/django.config << EOF
       - option_settings:
       -   aws:elasticbeanstalk:environment:proxy:
