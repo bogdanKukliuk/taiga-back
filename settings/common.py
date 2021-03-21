@@ -35,7 +35,7 @@ DATABASES = {
         "NAME": "taiga",
         "USER": "taiga",
         "PASSWORD": "taiga",
-        "HOST": "127.0.0.1"
+        "HOST": "taigadb.capl1ppkkhe3.us-east-1.rds.amazonaws.com"
     }
 }
 
