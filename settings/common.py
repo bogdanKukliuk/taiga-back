@@ -21,7 +21,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APPEND_SLASH = False
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['Taigaback.us-east-1.elasticbeanstalk.com']
 
 ADMINS = (
     ("Admin", "example@example.com"),
@@ -594,7 +594,7 @@ WEBHOOKS_BLOCK_PRIVATE_ADDRESS = False
 
 
 # If is True /front/sitemap.xml show a valid sitemap of taiga-front client
-FRONT_SITEMAP_ENABLED = False
+FRONT_SITEMAP_ENABLED = True
 FRONT_SITEMAP_CACHE_TIMEOUT = 24 * 60 * 60  # In second
 FRONT_SITEMAP_PAGE_SIZE = 25000
 

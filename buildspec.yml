@@ -14,8 +14,17 @@ phases:
       - pip install --upgrade pip wheel
       - pip install -r requirements.txt
       - pip install git+https://github.com/taigaio/taiga-contrib-protected.git@6.0.0#egg=taiga-contrib-protected
-      - cp settings/config.py.prod.example settings/config.py
-
+      - mkdir .ebextensions
+      - touch django.config
+      - cat << EOF > .ebextensions/django.config
+      - option_settings:
+      -   aws:elasticbeanstalk:environment:proxy:
+      -     ProxyServer: nginx
+      -   aws:elasticbeanstalk:container:python:
+      -     WSGIPath: taiga.wsgi:application
+      -     NumProcesses: 3
+      -     NumThreads: 20
+      - EOF
 artifacts:
   files:
     - '**/*'

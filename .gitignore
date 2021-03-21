@@ -19,5 +19,4 @@ static
 .idea
 .env
 .envrc
-settings/config.py
 celerybeat-schedule
