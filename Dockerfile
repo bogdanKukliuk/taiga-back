@@ -28,8 +28,8 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Get the code
-COPY . /taiga-back
-WORKDIR /taiga-back
+COPY . taiga-back
+WORKDIR taiga-back
 
 # grab gosu for easy step-down from root
 # https://github.com/tianon/gosu/blob/master/INSTALL.md
