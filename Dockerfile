@@ -65,9 +65,9 @@ RUN set -eux; \
     python -m pip install -r requirements-contribs.txt; \
     python manage.py compilemessages; \
     python manage.py collectstatic --no-input; \
-    chmod +x docker/entrypoint.sh; \
-    chmod +x docker/async_entrypoint.sh; \
-    cp docker/config.py settings/config.py; \
+    chmod +x entrypoint.sh; \
+    chmod +x async_entrypoint.sh; \
+    cp config.py settings/config.py; \
     #  create taiga group and user to use it and give permissions over the code (in entrypoint)
     groupadd --system taiga --gid=999; \
     useradd --system --no-create-home --gid taiga --uid=999 --shell=/bin/bash taiga; \
@@ -95,4 +95,4 @@ RUN set -eux; \
 ENV DJANGO_SETTINGS_MODULE=settings.config
 
 EXPOSE 8000
-ENTRYPOINT ["./docker/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
