@@ -21,7 +21,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APPEND_SLASH = False
-ALLOWED_HOSTS = ['Webtaiga-env.eba-73sfpppm.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['webtaiga-env.eba-73sfpppm.us-east-1.elasticbeanstalk.com']
 
 ADMINS = (
     ("Admin", "example@example.com"),
