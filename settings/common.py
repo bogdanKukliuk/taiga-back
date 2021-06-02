@@ -21,7 +21,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APPEND_SLASH = False
-ALLOWED_HOSTS = ['webtaiga-env.eba-73sfpppm.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['Webtaiga-env.eba-73sfpppm.us-east-1.elasticbeanstalk.com']
 
 ADMINS = (
     ("Admin", "example@example.com"),
@@ -32,10 +32,10 @@ DEBUG = False
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "taiga",
-        "USER": "taiga",
-        "PASSWORD": "taiga",
-        "HOST": "taigadb.capl1ppkkhe3.us-east-1.rds.amazonaws.com"
+        "NAME": "dfmqtbrs",
+        "USER": "dfmqtbrs",
+        "PASSWORD": "v5eAfgLGAH6C1039gQb5o7KvYXfx0bku",
+        "HOST": "rogue.db.elephantsql.com"
     }
 }
 
