@@ -33,7 +33,7 @@ DATABASES = {
         'NAME': 'dfmqtbrs',
         'USER': 'dfmqtbrs',
         'PASSWORD': 'v5eAfgLGAH6C1039gQb5o7KvYXfx0bku',
-        'HOST': '	rogue.db.elephantsql.com',
+        'HOST': 'rogue.db.elephantsql.com',
         'PORT': '5432',
     }
 }
