@@ -30,10 +30,10 @@ DEBUG = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bogdan',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'taigadb.cqltxspcptjd.us-east-2.rds.amazonaws.com',
+        'NAME': 'dfmqtbrs',
+        'USER': 'dfmqtbrs',
+        'PASSWORD': 'v5eAfgLGAH6C1039gQb5o7KvYXfx0bku',
+        'HOST': '	rogue.db.elephantsql.com',
         'PORT': '5432',
     }
 }
