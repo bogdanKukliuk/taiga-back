@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - ls
-      - python3 -m venv .venv --prompt taiga-back
+      - python3 -m venv .venv --prompt .
   build:
     commands:
       - source .venv/bin/activate
