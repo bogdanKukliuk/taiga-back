@@ -23,7 +23,7 @@ from .common import *   # noqa, pylint: disable=unused-wildcard-import
 #########################################
 
 DEBUG = False
-
+ALLOWED_HOSTS = ['Django-env.eba-2hs3myna.eu-central-1.elasticbeanstalk.com']
 #ADMINS = (
 #    ("Admin", "example@example.com"),
 #)
