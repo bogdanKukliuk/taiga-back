@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['Django-env.eba-2hs3myna.eu-central-1.elasticbeanstalk.com']
 #)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'rogue.db.elephantsql.com',
         'NAME': 'dfmqtbrs',
         'USER': 'dfmqtbrs',
         'PASSWORD': 'v5eAfgLGAH6C1039gQb5o7KvYXfx0bku',
